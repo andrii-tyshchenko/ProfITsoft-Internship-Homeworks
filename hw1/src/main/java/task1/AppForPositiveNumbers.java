@@ -5,12 +5,16 @@ import java.util.Comparator;
 
 public class AppForPositiveNumbers {
     public static void main(String[] args) {
-        Integer[] intArr = {5, 3, 8, 42, -157, 19, 1000, 4564655, -654, 0};
+        Integer[] intArray = {5, 3, 8, 42, -157, 19, 1000, 4564655, -654, 0};
 
-        Integer[] sortedPositiveIntArr = getSortedPositiveIntegers(intArr);
+        try {
+            Integer[] sortedPositiveIntArr = getSortedPositiveIntegers(intArray);
 
-        for (int i : sortedPositiveIntArr) {
-            System.out.println(i);
+            for (int i : sortedPositiveIntArr) {
+                System.out.println(i);
+            }
+        } catch(NullPointerException e) {
+            System.err.println(e.getMessage());
         }
     }
 
@@ -19,7 +23,11 @@ public class AppForPositiveNumbers {
      * @param intArray - an array of positive and negative Integers.
      * @return the new array.
      */
-    private static Integer[] getSortedPositiveIntegers(Integer[] intArray) {
+    protected static Integer[] getSortedPositiveIntegers(Integer[] intArray) {
+        if (intArray == null) {
+            throw new NullPointerException("Input array must not be null");
+        }
+
         return Arrays.stream(intArray)
                 .filter(i -> i >= 0)
                 .sorted(Comparator.reverseOrder())
