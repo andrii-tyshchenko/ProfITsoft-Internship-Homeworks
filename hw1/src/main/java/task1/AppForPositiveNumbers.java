@@ -21,7 +21,7 @@ public class AppForPositiveNumbers {
     /**
      * Returns an array of descendant sorted positive Integers from given Integer array.
      * @param intArray - an array of positive and negative Integers.
-     * @return the new array.
+     * @return the new descendant sorted array of positive Integers.
      */
     protected static Integer[] getSortedPositiveIntegers(Integer[] intArray) {
         if (intArray == null) {
