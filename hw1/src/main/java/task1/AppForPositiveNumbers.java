@@ -23,7 +23,7 @@ public class AppForPositiveNumbers {
      * @param intArray - an array of positive and negative Integers.
      * @return the new descendant sorted array of positive Integers.
      */
-    protected static Integer[] getSortedPositiveIntegers(Integer[] intArray) {
+    public static Integer[] getSortedPositiveIntegers(Integer[] intArray) {
         if (intArray == null) {
             throw new NullPointerException("Input array must not be null");
         }

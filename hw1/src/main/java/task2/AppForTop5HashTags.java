@@ -43,7 +43,7 @@ public class AppForTop5HashTags {
      * @param strings - list of strings, which may contain hashtags.
      * @return Map, containing top 5 hashtags (key - hashtag, value - count of its appearance).
      */
-    protected static Map<String, Long> getTop5HashTags(List<String> strings) {
+    public static Map<String, Long> getTop5HashTags(List<String> strings) {
         if (strings == null) {
             throw new NullPointerException("List of strings must not be null");
         }

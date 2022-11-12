@@ -30,7 +30,7 @@ public class AppForSortingShapesByVolume {
      * @param shapes - list of 3D shapes (ball, cube, cylinder).
      * @return list of 3D shapes, sorted by their volume (ascendant).
      */
-    protected static List<Shape3D> sortShapesByVolume(List<Shape3D> shapes) {
+    public static List<Shape3D> sortShapesByVolume(List<Shape3D> shapes) {
         if (shapes == null) {
             throw new NullPointerException("List of shapes must not be null");
         }
