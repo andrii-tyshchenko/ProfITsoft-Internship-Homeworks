@@ -1,0 +1,34 @@
+<fines_statistics>
+  <fine>
+    <type>Drink-driving</type>
+    <fine_amount>17000.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Absence of a driver's license</type>
+    <fine_amount>3400.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Speeding</type>
+    <fine_amount>1700.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Driving through a red light</type>
+    <fine_amount>1530.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Parking in places for people with disabilities</type>
+    <fine_amount>1020.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Riding without helmet</type>
+    <fine_amount>510.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Driving without a seatbelt</type>
+    <fine_amount>510.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Talking on the phone while driving</type>
+    <fine_amount>510.0</fine_amount>
+  </fine>
+</fines_statistics>

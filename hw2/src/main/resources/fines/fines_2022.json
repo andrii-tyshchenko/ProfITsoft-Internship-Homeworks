@@ -1,0 +1,37 @@
+[
+  {
+    "date_time": "2022-01-01 15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2022-02-02 12:45:15",
+    "first_name": "Jack",
+    "last_name": "Torrance",
+    "type": "Drink-driving",
+    "fine_amount": 17000.00
+  },
+  {
+    "date_time": "2022-03-03 16:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2022-04-04 15:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2022-11-09 12:00:00",
+    "first_name": "Kirill",
+    "last_name": "Stremousov",
+    "type": "Driving without a seatbelt",
+    "fine_amount": 510.00
+  }
+]
