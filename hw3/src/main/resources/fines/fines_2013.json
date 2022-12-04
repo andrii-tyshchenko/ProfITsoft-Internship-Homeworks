@@ -1,0 +1,86 @@
+[
+  {
+    "date_time": "2013-01-21 08:00:00",
+    "first_name": "Marty",
+    "last_name": "McFly",
+    "type": "Driving unregistered vehicle",
+    "fine_amount": 850.00
+  },
+  {
+    "date_time": "2013-02-25 08:00:00",
+    "first_name": "Daniel",
+    "last_name": "Morales",
+    "type": "Driving with broken brakes",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2013-03-22 08:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2013-04-01 20:30:00",
+    "first_name": "John",
+    "last_name": "Doe",
+    "type": "Absence of a driver's license",
+    "fine_amount": 3400.00
+  },
+  {
+    "date_time": "2013-05-17 15:20:00",
+    "first_name": "Johnny",
+    "last_name": "Blaze",
+    "type": "Riding without helmet",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2013-06-10 12:45:00",
+    "first_name": "Rachel",
+    "last_name": "Keller",
+    "type": "Talking on the phone while driving",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2013-07-28 12:00:00",
+    "first_name": "Henry",
+    "last_name": "Carpenter",
+    "type": "Driving without a valid driver license",
+    "fine_amount": 425.00
+  },
+  {
+    "date_time": "2013-08-15 20:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2013-09-20 10:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2013-10-20 09:00:00",
+    "first_name": "Matthew",
+    "last_name": "Smith",
+    "type": "Wrong children transportation",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2013-11-15 10:00:00",
+    "first_name": "Nick",
+    "last_name": "Fury",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2013-12-01 13:00:00",
+    "first_name": "Kirill",
+    "last_name": "Stremousov",
+    "type": "Parking in places for people with disabilities",
+    "fine_amount": 1020.00
+  }
+]

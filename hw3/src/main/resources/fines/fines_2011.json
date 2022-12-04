@@ -1,0 +1,86 @@
+[
+  {
+    "date_time": "2011-01-10 09:30:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2011-01-02 12:45:15",
+    "first_name": "Bill",
+    "last_name": "Newman",
+    "type": "Drink-driving",
+    "fine_amount": 17000.00
+  },
+  {
+    "date_time": "2011-03-05 15:25:00",
+    "first_name": "Johnny",
+    "last_name": "Blaze",
+    "type": "Riding without helmet",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2011-04-10 08:00:00",
+    "first_name": "Vasya",
+    "last_name": "Pupkin",
+    "type": "Driving without a valid driver license",
+    "fine_amount": 425.00
+  },
+  {
+    "date_time": "2011-05-15 10:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2011-06-25 08:00:00",
+    "first_name": "Daniel",
+    "last_name": "Morales",
+    "type": "Driving with broken brakes",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2011-07-22 08:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2011-08-01 20:30:00",
+    "first_name": "Elia",
+    "last_name": "Harryson",
+    "type": "Absence of a driver's license",
+    "fine_amount": 3400.00
+  },
+  {
+    "date_time": "2011-09-28 12:00:00",
+    "first_name": "Donald",
+    "last_name": "Dorky",
+    "type": "Driving without a valid driver license",
+    "fine_amount": 425.00
+  },
+  {
+    "date_time": "2011-10-20 09:00:00",
+    "first_name": "Homer",
+    "last_name": "Simpson",
+    "type": "Wrong children transportation",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2011-11-09 12:00:00",
+    "first_name": "Terry",
+    "last_name": "Smithson",
+    "type": "Driving without a seatbelt",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2011-12-12 15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  }
+]

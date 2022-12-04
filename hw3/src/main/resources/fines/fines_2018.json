@@ -1,0 +1,86 @@
+[
+  {
+    "date_time": "2018-01-01 15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2018-02-02 12:45:15",
+    "first_name": "Jack",
+    "last_name": "Torrance",
+    "type": "Drink-driving",
+    "fine_amount": 17000.00
+  },
+  {
+    "date_time": "2018-03-03 16:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2018-04-04 15:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2018-05-05 15:25:00",
+    "first_name": "Johnny",
+    "last_name": "Blaze",
+    "type": "Riding without helmet",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2018-06-20 10:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2018-07-10 12:45:00",
+    "first_name": "Rachel",
+    "last_name": "Keller",
+    "type": "Talking on the phone while driving",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2018-08-08 16:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2018-09-10 08:00:00",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "type": "Driving without a valid driver license",
+    "fine_amount": 425.00
+  },
+  {
+    "date_time": "2018-10-10 08:00:00",
+    "first_name": "John",
+    "last_name": "Aferist",
+    "type": "Driving with false number plate",
+    "fine_amount": 1190.00
+  },
+  {
+    "date_time": "2018-11-09 12:00:00",
+    "first_name": "Kirill",
+    "last_name": "Stremousov",
+    "type": "Driving without a seatbelt",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2018-12-12 15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "date_time": "2012-01-02 12:45:15",
+    "first_name": "Ernesto",
+    "last_name": "Gomez",
+    "type": "Drink-driving",
+    "fine_amount": 17000.00
+  },
+  {
+    "date_time": "2012-02-05 15:25:00",
+    "first_name": "Eugene",
+    "last_name": "O'Neil",
+    "type": "Riding without helmet",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2012-03-20 10:00:00",
+    "first_name": "Gustavo",
+    "last_name": "El-Nino",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2012-04-02 12:45:15",
+    "first_name": "Jimmy",
+    "last_name": "Morrison",
+    "type": "Drink-driving",
+    "fine_amount": 17000.00
+  },
+  {"date_time": "2012-05-03 16:00:00",
+  "first_name": "Ian",
+  "last_name": "Potter",
+  "type": "Speeding",
+  "fine_amount": 340.00
+  },
+  {
+    "date_time": "2012-06-10 12:45:00",
+    "first_name": "Margo",
+    "last_name": "Simpson",
+    "type": "Talking on the phone while driving",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2012-07-05 09:30:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2012-08-11 15:25:00",
+    "first_name": "Johnny",
+    "last_name": "Blaze",
+    "type": "Riding without helmet",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2012-09-09 08:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Driving with broken brakes",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2012-10-22 08:00:00",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  },
+  {
+    "date_time": "2012-11-20 10:00:00",
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "type": "Driving through a red light",
+    "fine_amount": 510.00
+  },
+  {
+    "date_time": "2012-12-22 08:00:00",
+    "first_name": "Andrew",
+    "last_name": "Vayne",
+    "type": "Speeding",
+    "fine_amount": 340.00
+  }
+]
