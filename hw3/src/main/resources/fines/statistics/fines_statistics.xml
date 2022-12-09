@@ -5,26 +5,22 @@
   </fine>
   <fine>
     <type>Absence of a driver's license</type>
-    <fine_amount>20400.0</fine_amount>
+    <fine_amount>17000.0</fine_amount>
   </fine>
   <fine>
     <type>Speeding</type>
-    <fine_amount>15640.0</fine_amount>
+    <fine_amount>14620.0</fine_amount>
   </fine>
   <fine>
     <type>Driving through a red light</type>
-    <fine_amount>10200.0</fine_amount>
+    <fine_amount>9690.0</fine_amount>
   </fine>
   <fine>
     <type>Riding without helmet</type>
-    <fine_amount>8160.0</fine_amount>
+    <fine_amount>7650.0</fine_amount>
   </fine>
   <fine>
     <type>Driving without a valid driver license</type>
-    <fine_amount>5525.0</fine_amount>
-  </fine>
-  <fine>
-    <type>Talking on the phone while driving</type>
     <fine_amount>5100.0</fine_amount>
   </fine>
   <fine>
@@ -32,23 +28,27 @@
     <fine_amount>4760.0</fine_amount>
   </fine>
   <fine>
+    <type>Talking on the phone while driving</type>
+    <fine_amount>4590.0</fine_amount>
+  </fine>
+  <fine>
     <type>Driving without a seatbelt</type>
     <fine_amount>3570.0</fine_amount>
   </fine>
   <fine>
     <type>Driving with broken brakes</type>
-    <fine_amount>3060.0</fine_amount>
-  </fine>
-  <fine>
-    <type>Parking in places for people with disabilities</type>
-    <fine_amount>3060.0</fine_amount>
+    <fine_amount>2720.0</fine_amount>
   </fine>
   <fine>
     <type>Wrong children transportation</type>
-    <fine_amount>3060.0</fine_amount>
+    <fine_amount>2550.0</fine_amount>
+  </fine>
+  <fine>
+    <type>Parking in places for people with disabilities</type>
+    <fine_amount>2040.0</fine_amount>
   </fine>
   <fine>
     <type>Driving unregistered vehicle</type>
-    <fine_amount>2550.0</fine_amount>
+    <fine_amount>1700.0</fine_amount>
   </fine>
 </fines_statistics>
