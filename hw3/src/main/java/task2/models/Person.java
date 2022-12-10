@@ -33,6 +33,22 @@ public class Person {
         this.someImportantTime = someImportantTime;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Instant getSomeImportantTime() {
+        return someImportantTime;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
