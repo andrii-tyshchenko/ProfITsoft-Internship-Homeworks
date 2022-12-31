@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:if test="${!users.isEmpty()}">
+                <c:if test="${not empty users}">
                     <c:forEach var="user" items="${users}">
                         <tr style="border: 1px solid">
                             <td style="border: 1px solid">${user.login}</td>
