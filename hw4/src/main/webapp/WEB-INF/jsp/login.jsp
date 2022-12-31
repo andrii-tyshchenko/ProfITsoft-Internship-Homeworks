@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <c:if test="${error != null}">
+        <c:if test="${not empty error}">
             <p style="color: red">
                 <b>${error}</b>
             </p>
