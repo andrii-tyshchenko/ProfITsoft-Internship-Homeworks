@@ -13,6 +13,7 @@
         <module>hw2</module>
         <module>hw3</module>
         <module>hw4</module>
+        <module>hw5</module>
     </modules>
 
     <properties>
