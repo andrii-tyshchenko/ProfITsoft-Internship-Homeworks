@@ -38,12 +38,7 @@ public class BookRepository {
                 .withTableName("books")
                 .usingGeneratedKeyColumns("id");
 
-        Map<String, Object> params = new HashMap<>();
-        params.put("title", book.getTitle());
-        params.put("author", book.getAuthor());
-        params.put("publisher_id", book.getPublisher().getId());
-        params.put("isbn", book.getIsbn());
-        params.put("publishing_year", book.getPublishingYear().getValue());
+        Map<String, Object> params = getParametersForBook(book);
 
         return insertBook.executeAndReturnKey(params).intValue();
         /*
@@ -102,12 +97,7 @@ public class BookRepository {
                 WHERE id = :id;
                 """;
 
-        Map<String, Object> params = new HashMap<>();
-        params.put("title", book.getTitle());
-        params.put("author", book.getAuthor());
-        params.put("publisher_id", book.getPublisher().getId());
-        params.put("isbn", book.getIsbn());
-        params.put("publishing_year", book.getPublishingYear().getValue());
+        Map<String, Object> params = getParametersForBook(book);
         params.put("id", id);
 
         namedParameterJdbcTemplate.update(sqlQuery, params);
@@ -181,5 +171,21 @@ public class BookRepository {
         Map<String, Integer> params = Map.of("id", id);
 
         return namedParameterJdbcTemplate.queryForObject(sqlQuery, params, Boolean.class);
+    }
+
+    /**
+     * Returns map with parameters, taken from the given {@code Book} fields, for using in SQL query.
+     * @param book entity with needed information
+     * @return map with parameters for using in SQL query
+     */
+    private Map<String, Object> getParametersForBook(Book book) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("title", book.getTitle());
+        params.put("author", book.getAuthor());
+        params.put("publisher_id", book.getPublisher().getId());
+        params.put("isbn", book.getIsbn());
+        params.put("publishing_year", book.getPublishingYear().getValue());
+
+        return params;
     }
 }
