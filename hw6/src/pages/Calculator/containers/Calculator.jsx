@@ -95,12 +95,50 @@ class Calculator extends React.Component {
         }
     }
 
-    getMathTasksFromBE = (mathTasksCount) => {
-        calculatorActions.fetchMathTasks({
+    getMathTasksFromBE = async (mathTasksCount) => {
+        await calculatorActions.fetchMathTasks({
             mathTasksCount: mathTasksCount,
         })(this.props.dispatch);
 
-        // TODO: пройтись по отриманим прикладам, вирішити їх і додати в історію
+        this.setState({history: this.state.history + "\nMath tasks from BE:\n"})
+        const exp = /(\d+)([/*\-+])(\d+)/;
+        let regExpResult;
+
+        for (let str of this.props.list) {
+            regExpResult = exp.exec(str);
+
+            let a = +regExpResult[1];
+            let sign = regExpResult[2];
+            let b = +regExpResult[3];
+            let result;
+
+            switch(sign) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break;
+                case "/":
+                    if (b === 0) {
+                        result = "Division by zero!";
+                        break;
+                    } else {
+                        result = a / b;
+                        break;
+                    }
+                default:
+                    result = "Something went wrong";
+            }
+
+            this.setState({history: this.state.history + str + "=" + result + "\n"})
+        }
+        this.setState({operandA: ""})
+        this.setState({operandB: ""})
+        this.setState({operation: ""})
     }
 
     render() {
@@ -117,9 +155,8 @@ class Calculator extends React.Component {
                         InputProps={{
                             className: this.props.classes.textFieldInputTextColor
                         }}
+                        maxRows={1000}
                     />
-                    <GetMathTasksButton numberOfTasks={5}
-                                        onClick={this.getMathTasksFromBE}/>
                 </div>
                 <div>
                     <NumberButton number={1}
@@ -132,6 +169,8 @@ class Calculator extends React.Component {
                                   onClick={this.updateHistory}/>
                     <NumberButton number={5}
                                   onClick={this.updateHistory}/>
+                    <GetMathTasksButton numberOfTasks={5}
+                                        onClick={this.getMathTasksFromBE}/>
                 </div>
                 <div>
                     <NumberButton number={6}
