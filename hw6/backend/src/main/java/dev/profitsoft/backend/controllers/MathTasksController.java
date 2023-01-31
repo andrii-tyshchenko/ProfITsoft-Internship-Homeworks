@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/math/mathtask")
 public class MathTasksController {
     @GetMapping()
