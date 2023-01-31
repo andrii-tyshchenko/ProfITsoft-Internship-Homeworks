@@ -3,6 +3,13 @@ import GetMathTasksButton from "./GetMathTasksButton";
 import NumberButton from "./NumberButton";
 import OperationButton from "./OperationButton";
 import TextField from "@material-ui/core/TextField";
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = () => ({
+    textFieldInputTextColor: {
+        color: 'grey',
+    },
+});
 
 class App extends React.Component {
     constructor(props) {
@@ -92,6 +99,9 @@ class App extends React.Component {
                         multiline
                         defaultValue={this.state.history}
                         variant="filled"
+                        InputProps={{
+                            className: this.props.classes.textFieldInputTextColor
+                        }}
                     />
                     <GetMathTasksButton />
                 </div>
@@ -136,4 +146,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default withStyles(styles)(App);
