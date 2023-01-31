@@ -11,23 +11,14 @@ const errorReceiveMathTasks= () => ({ // якщо під час запиту д�
     type: 'ERROR_RECEIVE_MATH_TASKS'
 });
 
-const getMathTasks = (mathTasksCount) => new Promise((onSuccess) => { // робимо запит до BE
-    setTimeout(
-        () => onSuccess(Array
-            .from(new Array(mathTasksCount).keys())
-            .map(index => ({ name: `MathTask ${index}`}))),
-        1000
-    );
-});
+const getMathTasks = (mathTasksCount) => { // робимо запит до BE
+    const url = 'http://localhost:8080/math/mathtask?count=' + mathTasksCount; // ! обов'язково з http://
+    alert(url);
 
-// TODO: запит на BE
-// const getMathTasks = (mathTasksCount) => {
-//     const url = 'localhost:8080/math/mathtask?count=' + mathTasksCount;
-//
-//     return fetch(url)
-//         .then(response => response.json())
-//         .catch(error => alert(error))
-// };
+    return fetch(url)
+        .then(response => response.json())
+        .catch(error => alert(error))
+};
 
 const fetchMathTasks = ({ mathTasksCount }) => (dispatch) => {
     dispatch(requestMathTasks()); // Повідомляю стору, що роблю запит прикладів
