@@ -5,17 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.profitsoft.tyshchenko</groupId>
-    <artifactId>ProfITsoft-Internship-Homeworks</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>hw7</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
-        <module>hw1</module>
-        <module>hw2</module>
-        <module>hw3</module>
-        <module>hw4</module>
-        <module>hw5</module>
-        <module>hw6</module>
-        <module>hw7</module>
+        <module>BEforBooks</module>
     </modules>
 
     <properties>
@@ -23,5 +17,4 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 </project>
