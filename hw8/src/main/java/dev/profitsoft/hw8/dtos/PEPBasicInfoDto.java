@@ -1,7 +1,9 @@
 package dev.profitsoft.hw8.dtos;
 
 public class PEPBasicInfoDto {
-    private String fullNameUA;
+    private String firstNameUA;
+    private String patronymic;
+    private String lastNameUA;
     private String dateOfBirth;
     private Boolean died;
     private Boolean isPEP;
@@ -10,12 +12,28 @@ public class PEPBasicInfoDto {
     private String lastJobTitleUA;
     private String url;
 
-    public String getFullNameUA() {
-        return fullNameUA;
+    public String getFirstNameUA() {
+        return firstNameUA;
     }
 
-    public void setFullNameUA(String fullNameUA) {
-        this.fullNameUA = fullNameUA;
+    public void setFirstNameUA(String firstNameUA) {
+        this.firstNameUA = firstNameUA;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
+    }
+
+    public String getLastNameUA() {
+        return lastNameUA;
+    }
+
+    public void setLastNameUA(String lastNameUA) {
+        this.lastNameUA = lastNameUA;
     }
 
     public String getDateOfBirth() {
