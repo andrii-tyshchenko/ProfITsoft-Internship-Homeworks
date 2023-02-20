@@ -93,7 +93,9 @@ public class PEPsServiceImpl implements PEPsService {
      */
     private PEPBasicInfoDto convertToPEPBasicInfoDto(PEPData pep) {
         PEPBasicInfoDto pepBasicInfo = new PEPBasicInfoDto();
-        pepBasicInfo.setFullNameUA(pep.getFullNameUA());
+        pepBasicInfo.setFirstNameUA(pep.getFirstNameUA());
+        pepBasicInfo.setPatronymic(pep.getPatronymic());
+        pepBasicInfo.setLastNameUA(pep.getLastNameUA());
         pepBasicInfo.setDateOfBirth(pep.getDateOfBirth());
         pepBasicInfo.setDied(pep.getDied());
         pepBasicInfo.setIsPEP(pep.getIsPEP());
