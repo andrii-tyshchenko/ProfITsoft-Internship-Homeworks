@@ -5,6 +5,8 @@ import dev.profitsoft.hw8.dtos.RelatedCompany;
 import dev.profitsoft.hw8.dtos.RelatedCountry;
 import dev.profitsoft.hw8.dtos.RelatedPerson;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -14,6 +16,7 @@ import java.util.List;
  * Represents information about PEP (politically exposed person)
  */
 @Document("peps")
+@CompoundIndex(def = "{'first_name':1, 'patronymic':1, 'last_name':1}", name = "name_patronymic_surname_index")
 public class PEPData {
     @Id
     private String id;
@@ -41,6 +44,7 @@ public class PEPData {
     private String dateOfBirth;
     private Boolean died;
     @Field("is_pep")
+    @Indexed
     private Boolean isPEP;
     @Field("type_of_official")
     private String typeOfOfficialUA;
