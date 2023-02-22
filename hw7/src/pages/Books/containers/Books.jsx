@@ -124,15 +124,15 @@ const Books = ({
                   {/* бачать лише адміни */}
                   {canCreateUpdateDeleteBooks &&
                     <TableCell>
-                      <Button variant="outlined">
-                        <Typography variant="button"
-                                    id={book.id}
-                                    onClick={ () => setState(prevState => ({
-                                      ...prevState,
-                                      shouldDeleteBook: true,
-                                      bookIdThatShouldBeDeleted: book.id,
-                                    })) }
-                        >
+                      <Button variant="outlined"
+                              id={book.id}
+                              onClick={ () => setState(prevState => ({
+                                ...prevState,
+                                shouldDeleteBook: true,
+                                bookIdThatShouldBeDeleted: book.id,
+                              })) }
+                      >
+                        <Typography variant="button">
                           {formatMessage({ id: 'delete' })}
                         </Typography>
                       </Button>
