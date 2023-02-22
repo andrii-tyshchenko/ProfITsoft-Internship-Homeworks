@@ -35,6 +35,7 @@ const EditBook = ({ authorities }) => {
     book,
     isFetchingBook,
     isFailedFetchBook,
+    isUpdatingBook,
     isFailedUpdateBook,
   } = useSelector(({ reducer }) => reducer);
 
@@ -57,17 +58,19 @@ const EditBook = ({ authorities }) => {
     }));
   }, [isFailedUpdateBook]);
 
+  useEffect(() => {
+    // чогось бачить попереднє значення isFailedUpdateBook, хоча редірект працює правильно
+    if (state.componentDidMount && !isUpdatingBook && !isFailedUpdateBook) {
+      history.push("/books"); // redirect на сторінку зі списком книг, якщо успішно оновили
+    }
+  }, [isUpdatingBook, isFailedUpdateBook]);
+
   const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
     dispatch(fetchUpdateBook(id, book));
-
-    // чогось бачить попереднє значення, хоча на сторінці рендериться актуальне
-    if (!isFailedUpdateBook) {
-      history.push("/books"); // redirect на сторінку зі списком книг, якщо успішно оновили
-    }
   }
 
   return (
