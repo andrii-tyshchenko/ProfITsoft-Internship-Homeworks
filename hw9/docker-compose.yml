@@ -1,0 +1,74 @@
+version: "3"
+services:
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    container_name: zookeeper
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - app-network
+  kafka:
+    image: 'bitnami/kafka:latest'
+    container_name: kafka
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+    networks:
+      - app-network
+  elasticsearch:
+    image: elasticsearch:8.6.1
+    container_name: elasticsearch
+#    healthcheck:
+#      test: [ "CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1" ]
+#      interval: 30s
+#      timeout: 30s
+#      retries: 3
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - xpack.security.enabled=false
+    volumes:
+      - ./data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - app-network
+  app:
+#    image: hw9-email-service
+    container_name: hw9-email-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+#      - MAIL_HOST=$MAIL_HOST
+#      - MAIL_PORT=$MAIL_PORT
+#      - MAIL_USERNAME=$MAIL_USERNAME
+#      - MAIL_PASSWORD=$MAIL_PASSWORD
+#      - MAIL_PROPERTIES_MAIL_SMTP_AUTH=$MAIL_PROPERTIES_MAIL_SMTP_AUTH
+#      - MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE=$MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE
+      - MAIL_HOST=smtp.gmail.com
+      - MAIL_PORT=587
+      - MAIL_USERNAME=osbbhd4@gmail.com
+      - MAIL_PASSWORD=pzjuzybxzabfblci
+      - MAIL_PROPERTIES_MAIL_SMTP_AUTH=true
+      - MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE=true
+    depends_on:
+      - kafka
+      - elasticsearch
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
