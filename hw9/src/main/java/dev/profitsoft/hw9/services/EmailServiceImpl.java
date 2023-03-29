@@ -63,11 +63,11 @@ public class EmailServiceImpl implements EmailService {
 
     private void tryToSendEmailOrChangeStatusIfException(EmailLetterData emailLetter) {
         try {
-            for (String toAddress : emailLetter.getEmailAddresses()) {
-                sendEmailLetterWithoutAttachments(toAddress, emailLetter.getSubject(), emailLetter.getText());
+            String[] addresses = emailLetter.getEmailAddresses().toArray(String[]::new);
+            String subject = emailLetter.getSubject();
+            String text = emailLetter.getText();
 
-                Thread.sleep(5000); // Gmail не відсилає повідомлення, якщо їх іде багато одночасно або надто часто
-            }
+            sendEmailLetterWithoutAttachments(addresses, subject, text);
 
             emailLetter.setStatus(EmailLetterStatus.SENT);
             emailLetter.setErrorMessage(null);
@@ -81,7 +81,7 @@ public class EmailServiceImpl implements EmailService {
         }
     }
 
-    private void sendEmailLetterWithoutAttachments(String toAddress, String subject, String text) {
+    private void sendEmailLetterWithoutAttachments(String[] toAddress, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(toAddress);
