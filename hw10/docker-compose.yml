@@ -1,0 +1,17 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-hw-10
+    ports:
+      - "27017:27017"
+
+  consul:
+    image: consul:latest
+    container_name: consul
+    ports:
+      - "8501:8500"
+    command: consul agent -server -bootstrap-expect=1 -ui -data-dir /consul/data -client=0.0.0.0
+    volumes:
+      - ./config-data:/consul/data
+    restart: on-failure

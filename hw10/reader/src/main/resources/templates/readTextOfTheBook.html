@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Read the book</title>
+    </head>
+    <body>
+        <p th:if="${error}" th:text="${error}" style="color: red" />
+        <p th:if="${textOfTheBook}" th:text="${textOfTheBook}" />
+    </body>
+</html>

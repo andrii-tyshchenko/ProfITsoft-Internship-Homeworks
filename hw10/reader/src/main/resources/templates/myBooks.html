@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My books</title>
+    </head>
+    <body>
+        <button th:if="${error}" onclick="location.href='http://localhost:8081/login'" type="button">
+            Підключити акаунт
+        </button>
+
+        <div th:if="${myBooks}">
+            <p>
+                <strong>
+                    My books:
+                </strong>
+            </p>
+            <ol>
+                <li th:each="book : ${myBooks}">
+                    <a th:href="@{'/myBooks/' + ${book.id}}"
+                       th:text="${book.author} + ' \'' + ${book.title} + '\' - ' + ${book.publisher} + ', ISBN ' + ${book.isbn} + ' (' + ${book.publishingYear} + ')'" />
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

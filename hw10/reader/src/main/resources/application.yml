@@ -1,0 +1,16 @@
+server:
+    port: 8081
+    error:
+        include-message: always
+        include-binding-errors: always
+#        include-stacktrace: never
+spring:
+    application:
+        name: reader
+
+feign:
+    client:
+        config:
+            mybooksClient:
+                errorDecoder: dev.profitsoft.reader.errorDecoder.RetreiveMessageErrorDecoder
+                decode404: true

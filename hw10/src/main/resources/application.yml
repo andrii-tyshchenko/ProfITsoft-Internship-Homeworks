@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+
+spring:
+  application:
+    name: library
+  config:
+    import: optional:consul:/
+  cloud:
+    consul:
+      host: localhost
+      port: 8501
+      discovery:
+        health-check-path: /health
+  data:
+    mongodb:
+      uri: ${mongoUri}
+#      uri: mongodb://localhost:27017/library
+      auto-index-creation: true
+
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      base-path: /
+#      exposure:
+#        include: "*"

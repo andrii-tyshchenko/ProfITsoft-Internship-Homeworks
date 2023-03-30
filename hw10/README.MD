@@ -1,0 +1,1 @@
+To run docker-compose with Consul you have to add config-data folder to the root of project
