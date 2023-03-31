@@ -22,6 +22,17 @@ spring:
 #      uri: mongodb://localhost:27017/library
       auto-index-creation: true
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      services:
+        wait-duration-in-open-state: 10s
+        failure-rate-threshold: 60
+        slow-call-duration-threshold:
+          - 2s
+        minimum-number-of-calls: 3
+        permitted-number-of-calls-in-half-open-state: 1
+
 #management:
 #  endpoint:
 #    health:
